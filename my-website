@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çağın Çapraz | Personal Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Üst Menü -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="social.html">Social</a></li>
+        </ul>
+    </nav>
+
+    <!-- Ana İçerik -->
+    <div class="hero">
+        <h1 class="neon-text">Çağın Çapraz</h1>
+        <p class="subtitle">GIS • Mapping • Web Technologies</p>
+
+        <a class="cta-button" href="background.html">Explore</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Çağın Çapraz | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0a0a0a;
+    color: #e6e6e6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #00eaff;
+    box-shadow: 0px 0px 8px #00eaff;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 18px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #00eaff;
+    text-shadow: 0px 0px 8px #00eaff;
+}
+
+/* HERO Bölümü */
+.hero {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.neon-text {
+    font-size: 58px;
+    color: #00eaff;
+    text-shadow: 0px 0px 10px #00eaff, 0px 0px 20px #00eaff;
+    animation: neonGlow 2.5s infinite alternate;
+}
+
+.subtitle {
+    margin-top: -10px;
+    font-size: 18px;
+    color: #bfbfbf;
+}
+
+/* Buton */
+.cta-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 12px 28px;
+    font-size: 18px;
+    color: #0a0a0a;
+    background-color: #00eaff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px #00eaff;
+}
+
+.cta-button:hover {
+    background-color: #00c4d4;
+    box-shadow: 0px 0px 18px #00eaff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 140px;
+    padding: 30px;
+    font-size: 14px;
+    border-top: 1px solid #00eaff;
+    box-shadow: 0px 0px 6px #00eaff;
+}
+
+/* Neon Yazı Animasyonu */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0px 0px 5px #00eaff, 0px 0px 10px #00eaff;
+    }
+    to {
+        text-shadow: 0px 0px 20px #00eaff, 0px 0px 35px #00eaff;
+    }
+}

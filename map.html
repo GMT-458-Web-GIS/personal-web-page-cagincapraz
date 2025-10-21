@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map | Çağın Çapraz</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- OpenLayers CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
+
+    <style>
+        /* Harita boyutu */
+        #map {
+            width: 80%;
+            height: 500px;
+            margin: 40px auto;
+            border: 2px solid #00eaff;
+            box-shadow: 0 0 10px #00eaff;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Üst Menü -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="map.html" class="active">Map</a></li>
+            <li><a href="social.html">Social</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="neon-text" style="text-align:center; margin-top:50px;">Satellite Map</h1>
+
+    <!-- Harita Alanı -->
+    <div id="map"></div>
+
+    <!-- OpenLayers JS -->
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
+
+    <script>
+        // Uydu harita kaynağı
+        const map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.XYZ({
+                        url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+                    })
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([32.85, 39.93]), // Ankara koordinatı (örnek)
+                zoom: 6
+            })
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Çağın Çapraz | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

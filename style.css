@@ -1,0 +1,163 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0a0a0a;
+    color: #e6e6e6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #00eaff;
+    box-shadow: 0px 0px 8px #00eaff;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 18px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #00eaff;
+    text-shadow: 0px 0px 8px #00eaff;
+}
+
+/* HERO Bölümü */
+.hero {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.neon-text {
+    font-size: 58px;
+    color: #00eaff;
+    text-shadow: 0px 0px 10px #00eaff, 0px 0px 20px #00eaff;
+    animation: neonGlow 2.5s infinite alternate;
+}
+
+.subtitle {
+    margin-top: -10px;
+    font-size: 18px;
+    color: #bfbfbf;
+}
+
+/* Buton */
+.cta-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 12px 28px;
+    font-size: 18px;
+    color: #0a0a0a;
+    background-color: #00eaff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px #00eaff;
+}
+
+.cta-button:hover {
+    background-color: #00c4d4;
+    box-shadow: 0px 0px 18px #00eaff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 140px;
+    padding: 30px;
+    font-size: 14px;
+    border-top: 1px solid #00eaff;
+    box-shadow: 0px 0px 6px #00eaff;
+}
+
+/* Neon Yazı Animasyonu */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0px 0px 5px #00eaff, 0px 0px 10px #00eaff;
+    }
+    to {
+        text-shadow: 0px 0px 20px #00eaff, 0px 0px 35px #00eaff;
+    }
+}
+
+/* Background Page */
+.content {
+    width: 70%;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.bio-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #cfcfcf;
+    margin-top: 20px;
+}
+
+/* Project Table */
+.project-table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.project-table th, .project-table td {
+    border: 1px solid #00eaff;
+    padding: 12px;
+}
+
+.project-table th {
+    background-color: #001f25;
+    color: #00eaff;
+    font-size: 18px;
+}
+
+.project-table tr:hover {
+    background-color: #002b33;
+    transition: 0.3s;
+}
+
+.project-table img {
+    width: 110px;
+    border-radius: 6px;
+}
+
+/* GitHub Button */
+.github-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #00eaff;
+    color: #0a0a0a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+    box-shadow: 0 0 10px #00eaff;
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    box-shadow: 0 0 18px #00eaff;
+    background-color: #00c7d8;
+}
+
+

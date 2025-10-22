@@ -160,4 +160,49 @@ footer {
     background-color: #00c7d8;
 }
 
+/* Animated Globe */
+.globe-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.globe {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Equirectangular_projection_SW.jpg/640px-Equirectangular_projection_SW.jpg");
+    background-size: cover;
+    box-shadow: 0 0 25px #00eaff;
+    animation: spin 8s linear infinite, glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+    from { background-position: 0 0; }
+    to { background-position: -640px 0; }
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 15px #00eaff; }
+    to { box-shadow: 0 0 35px #00eaff; }
+}
+
+.profile-pic {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 3px solid #00eaff;
+    box-shadow: 0 0 20px #00eaff;
+    display: block;
+    margin: 20px auto;
+    animation: pulse 3s ease-in-out infinite;
+    object-fit: cover;
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+
 

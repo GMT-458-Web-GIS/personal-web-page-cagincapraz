@@ -5,7 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background | Çağın Çapraz</title>
     <link rel="stylesheet" href="style.css">
+
     <style>
+        .lang-toggle {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .lang-btn {
+            background: none;
+            border: 2px solid #00eaff;
+            color: #00eaff;
+            font-size: 16px;
+            padding: 8px 16px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            background-color: #00eaff;
+            color: #000;
+        }
+        .hidden {
+            display: none;
+        }
         .gallery {
             display: flex;
             justify-content: center;
@@ -14,7 +37,6 @@
             margin-top: 40px;
             flex-wrap: wrap;
         }
-
         .gallery img {
             width: 300px;
             height: 220px;
@@ -24,7 +46,6 @@
             box-shadow: 0 0 15px #00eaff;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
-
         .gallery img:hover {
             transform: scale(1.06);
             box-shadow: 0 0 25px #00eaff;
@@ -33,7 +54,7 @@
 </head>
 <body>
 
-    <!-- Üst Menü -->
+    <!-- Menü -->
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -44,9 +65,15 @@
         </ul>
     </nav>
 
-    <div class="content">
-        <h1 class="neon-text">About Me</h1>
+    <!-- Dil Değiştirme Butonları -->
+    <div class="lang-toggle">
+        <button class="lang-btn" onclick="showLang('tr')">🇹🇷 Türkçe</button>
+        <button class="lang-btn" onclick="showLang('en')">🇬🇧 English</button>
+    </div>
 
+    <!-- Türkçe Versiyon -->
+    <div id="tr-content">
+        <h1 class="neon-text">Hakkımda</h1>
         <p class="bio-text">
             Çağın Çapraz, Geomatik Mühendisliği öğrencisidir. CBS, haritalama, uzaktan algılama ve web teknolojileri ile ilgilenmektedir. 
             Kodlama, modern web haritalama çözümleri ve açık kaynak yazılımlar üzerine çalışmalar yapmaktadır.
@@ -56,17 +83,46 @@
         <p class="bio-text">
             Boş zamanlarında masa tenisi oynamaktan, voleybol maçlarına katılmaktan ve bilgisayar oyunlarıyla vakit geçirmekten hoşlanmaktadır.
         </p>
+    </div>
 
-        <div class="gallery">
-            <img src="photo1.jpg" alt="Childhood Photo">
-            <img src="photo2.jpg" alt="Football Match">
-            <img src="photo3.jpg" alt="Volleyball Match">
-        </div>
+    <!-- İngilizce Versiyon -->
+    <div id="en-content" class="hidden">
+        <h1 class="neon-text">About Me</h1>
+        <p class="bio-text">
+            Çağın Çapraz is a Geomatics Engineering student. He is interested in GIS, mapping, remote sensing, and web technologies.
+            He works on coding, modern web mapping solutions, and open-source software development.
+        </p>
+
+        <h2 class="neon-text" style="margin-top:40px;">Hobbies</h2>
+        <p class="bio-text">
+            In his free time, he enjoys playing table tennis, participating in volleyball matches, and spending time playing computer games.
+        </p>
+    </div>
+
+    <!-- Fotoğraf Galerisi -->
+    <div class="gallery">
+        <img src="photo1.jpg" alt="Childhood Photo">
+        <img src="photo2.jpg" alt="Football Match">
+        <img src="photo3.jpg" alt="Volleyball Match">
     </div>
 
     <footer>
         <p>© 2025 Çağın Çapraz | All Rights Reserved</p>
     </footer>
+
+    <script>
+        function showLang(lang) {
+            const tr = document.getElementById("tr-content");
+            const en = document.getElementById("en-content");
+            if (lang === "tr") {
+                tr.classList.remove("hidden");
+                en.classList.add("hidden");
+            } else {
+                en.classList.remove("hidden");
+                tr.classList.add("hidden");
+            }
+        }
+    </script>
 
 </body>
 </html>
